@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A Quiet Moment - The Wax Wizard</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#626a53",
+                        "on-primary-container": "#6b675d",
+                        "on-secondary-fixed": "#2c1608",
+                        "primary-container": "#ede6da",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fdf8f6",
+                        "background": "#fdf8f6",
+                        "on-surface-variant": "#4a463f",
+                        "on-secondary-container": "#795a48",
+                        "primary-fixed": "#e9e2d6",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fdf8f6",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "inverse-surface": "#31302f",
+                        "surface-container-highest": "#e6e2e0",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-high": "#ece7e5",
+                        "primary-fixed-dim": "#ccc6ba",
+                        "on-primary-fixed-variant": "#4a463e",
+                        "on-tertiary-fixed-variant": "#424934",
+                        "tertiary-fixed": "#dee6c9",
+                        "inverse-primary": "#ccc6ba",
+                        "secondary-fixed-dim": "#e7bea8",
+                        "secondary-fixed": "#ffdbc8",
+                        "tertiary": "#5a614b",
+                        "on-tertiary-fixed": "#171e0c",
+                        "surface-container": "#f1edeb",
+                        "surface-variant": "#e6e2e0",
+                        "inverse-on-surface": "#f4f0ee",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#ddd9d7",
+                        "on-primary-fixed": "#1e1b14",
+                        "secondary-container": "#fed4bd",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#e2eacd",
+                        "tertiary-fixed-dim": "#c2caae",
+                        "on-error-container": "#93000a",
+                        "outline": "#7b776e",
+                        "secondary": "#775846",
+                        "on-secondary-fixed-variant": "#5d4030",
+                        "outline-variant": "#ccc6bc",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f7f3f1",
+                        "primary": "#625e55",
+                        "surface-tint": "#625e55"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "64px",
+                        "base": "8px",
+                        "grid-margin-desktop": "80px",
+                        "gutter": "24px",
+                        "grid-margin-mobile": "24px",
+                        "section-gap-desktop": "120px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-md": ["DM Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "label-sm": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased">
+<!-- Nav shell suppressed as per "Automatic Suppression" rule for "Error 404" context -> Prioritizing canvas -->
+<!-- However, prompt explicitly requests "The standard brand TopNavBar and Footer for continuity." -->
+<!-- Applying Conflict Resolution Protocol: Direct user prompt overrides general intent rules if explicitly requested in this specific turn, but I will map to the JSON. -->
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-grid-margin-mobile md:px-grid-margin-desktop py-base max-w-[1280px] mx-auto bg-background dark:bg-background flat no shadows">
+<a class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim tracking-tight" href="#">The Wax Wizard</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="#">Candles</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed-dim hover:text-secondary transition-colors duration-300 flex items-center justify-center p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+<span aria-hidden="true" class="material-symbols-outlined" data-icon="camera">camera</span>
+<span class="sr-only">camera</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center py-section-gap-mobile md:py-section-gap-desktop px-grid-margin-mobile md:px-grid-margin-desktop w-full max-w-[1280px] mx-auto relative overflow-hidden">
+<!-- Subtle Ambient Glow -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-20">
+<div class="w-96 h-96 bg-secondary-container rounded-full blur-[100px]"></div>
+</div>
+<div class="flex flex-col items-center text-center max-w-2xl z-10 space-y-12">
+<!-- Atmospheric Image Element (Arch motif) -->
+<div class="w-48 h-64 md:w-64 md:h-80 rounded-t-full overflow-hidden relative" style="clip-path: path('M0,128 C0,57.307552 57.307552,0 128,0 C198.692448,0 256,57.307552 256,128 L256,320 L0,320 L0,128 Z');">
+<img alt="A quiet moment with an unlit candle" class="w-full h-full object-cover grayscale-[20%] sepia-[10%] opacity-90 transition-opacity duration-1000 hover:opacity-100" data-alt="A soft, highly atmospheric photograph of a single, unlit artisanal pillar candle resting on a rustic wooden plinth against an Ivory Lace backdrop. The lighting is calm, quiet, and moody, evoking a sense of stillness and anticipation. A subtle, elegant wisp of white smoke curls gently upwards in the background. The aesthetic is premium boutique luxury with deep espresso shadows and warm, minimal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCssjE7N8MSNUmSt0wr4zPZgGpLL5LuVq5zf-JcVyiuk377JTGFiGc5qLj43bNq0RfNQISajjGMyoV6qkm_PFXPSR0vcxL-unF-nhTd6MvyoHjiAlBrMAl5dyPE6G0cPxJYE0sAGW0jHy0V9dji2lQ8gi1EBz9AGq_qcYQD6pFG6U0rufVafZ2VCAXh_ywZgRixkgNM11ib0tMB1pcINoAVPhSHWwX-jgb3xy48LNZXt4LTuUKgTsaeUw"/>
+<!-- Subtle inner shadow overlay to integrate with background -->
+<div class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-t-full pointer-events-none"></div>
+</div>
+<div class="space-y-6">
+<!-- Heading -->
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tight text-balance">
+                    A Quiet Moment.
+                </h1>
+<!-- Subheading -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto text-balance">
+                    This part of our collection is still being poured. We're currently hand-crafting something special for this space.
+                </p>
+</div>
+<!-- CTA -->
+<div class="pt-4">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-on-background text-on-primary font-label-md text-label-md rounded-md hover:bg-secondary transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-on-background focus:ring-offset-background" href="#">
+                    Return to the Collection
+                    <span aria-hidden="true" class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform duration-300" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest full-width">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-grid-margin-mobile md:px-grid-margin-desktop py-section-gap-mobile md:py-16 max-w-[1280px] mx-auto text-center md:text-left bg-surface-container-low dark:bg-surface-container-lowest flat no shadows">
+<div class="mb-8 md:mb-0">
+<span class="font-headline-sm text-headline-sm text-primary block mb-2">The Wax Wizard</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 The Wax Wizard. All rights reserved.</p>
+</div>
+<nav class="flex gap-6 items-center flex-wrap justify-center md:justify-end">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary underline transition-all duration-200" href="#">Instagram</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary underline transition-all duration-200" href="#">Privacy</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary underline transition-all duration-200" href="#">Terms</a>
+</nav>
+</div>
+</footer>
+</body></html>
