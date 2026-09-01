@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Candle 04 - The Wax Wizard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#6b675d",
+                        "secondary": "#775846",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fed4bd",
+                        "inverse-surface": "#31302f",
+                        "on-background": "#1c1b1b",
+                        "on-primary-fixed-variant": "#4a463e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#626a53",
+                        "tertiary-fixed": "#dee6c9",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#1e1b14",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#625e55",
+                        "secondary-fixed-dim": "#e7bea8",
+                        "secondary-fixed": "#ffdbc8",
+                        "inverse-primary": "#ccc6ba",
+                        "tertiary-container": "#e2eacd",
+                        "on-tertiary-fixed-variant": "#424934",
+                        "primary-fixed": "#e9e2d6",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#ccc6ba",
+                        "surface-container": "#f1edeb",
+                        "primary-container": "#ede6da",
+                        "tertiary": "#5a614b",
+                        "surface-container-high": "#ece7e5",
+                        "inverse-on-surface": "#f4f0ee",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#795a48",
+                        "on-secondary-fixed": "#2c1608",
+                        "on-tertiary-fixed": "#171e0c",
+                        "primary": "#625e55",
+                        "surface-container-low": "#f7f3f1",
+                        "tertiary-fixed-dim": "#c2caae",
+                        "background": "#fdf8f6",
+                        "on-surface-variant": "#4a463f",
+                        "outline-variant": "#ccc6bc",
+                        "surface-variant": "#e6e2e0",
+                        "surface-container-highest": "#e6e2e0",
+                        "outline": "#7b776e",
+                        "on-secondary-fixed-variant": "#5d4030",
+                        "surface-dim": "#ddd9d7",
+                        "surface": "#fdf8f6",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fdf8f6",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "grid-margin-mobile": "24px",
+                        "gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "grid-margin-desktop": "80px",
+                        "section-gap-desktop": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .arch-clip {
+            clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0 100%);
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 40px -10px rgba(44, 22, 8, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 bg-background/90 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-grid-margin-mobile md:px-grid-margin-desktop py-base max-w-[1280px] mx-auto flat no shadows">
+<div class="flex items-center gap-6">
+<a class="font-headline-sm text-headline-sm text-primary hover:opacity-80 transition-opacity" href="#">The Wax Wizard</a>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="text-primary font-bold border-b border-primary pb-1 font-label-md text-label-md hover:text-secondary transition-colors duration-300 opacity-80" href="#">Candles</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button aria-label="Camera" class="text-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+</button>
+<button aria-label="Menu" class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Product Hero Section -->
+<main class="max-w-[1280px] mx-auto px-grid-margin-mobile md:px-grid-margin-desktop pt-12 pb-section-gap-mobile md:pb-section-gap-desktop">
+<!-- Breadcrumb -->
+<div class="mb-8 font-label-sm text-label-sm text-outline flex items-center gap-2">
+<a class="hover:text-primary transition-colors" href="#">Shop</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Signature Collection</a>
+<span>/</span>
+<span class="text-on-surface">Candle 04</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Image Gallery (Left Column) -->
+<div class="md:col-span-7 flex flex-col gap-gutter">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low arch-clip overflow-hidden">
+<img alt="Candle 04 Primary Image" class="w-full h-full object-cover" data-alt="A sophisticated close-up of a luxurious artisanal candle, 'Candle 04', resting on a textured linen cloth. The lighting is soft and natural, emphasizing the creamy texture of the hand-poured wax and the minimalist aesthetic. A subtle, atmospheric glow surrounds the candle, highlighting the 'Deep Espresso' and 'Ivory Lace' tones characteristic of a premium boutique brand. Minimalist editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPTyYAX0wtc-AsTV8tv6yYRC7W7oNawn7Kz5IDsZqp6jNL6t-2UndUGFrm5dkEE4yFrhDiQdzpAyWnFS2NIPLCPr6yyjjvkFPCL1yDd3OAQe-lq3utJ7XlIEktRbt3k08ICixf7YTkIN9jrC7G0YC70GTB0xirrNapoGEOCXx2FkP7_fFOcC7cwpXriR3aTBqvNQlzkiWjWVPC5yKcEOGUXeIyP1r5KUZmN5PcM7rcu23YJAoEqgou7A"/>
+</div>
+<div class="grid grid-cols-2 gap-gutter mt-4">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Candle Texture Detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Detail shot of the candle wick and textured wax surface of 'Candle 04'. The focus is extremely sharp on the craftsmanship, with a shallow depth of field blurring out a warmly lit, neutral background. Soft, diffused lighting enhances the organic, handmade quality. Warm biscotti and sage green subtle hints in the blurred background. Premium editorial product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCb4ORHXypx-3VJKj587XCcelwV6qtuARBb_5ooh5GnGbPlhxaIpL_WHcSvbnZRkWU9k2vWiV1GkRg1OflH4xcLXm1291j0O2PVV_TdrlfxDI7bAVgguHapsh6jLFSZPJd07OJVlJUKWlDDUnRnAKOP7B2Dv_BwajS-T1XDXMO3qfnGPiAyczMTJK9DyzS1sowrirvTDgB8IMkqeWeO5fbQypyXIwL4CHB4RhGjnP2UQdhIqQQYMauog"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden">
+<img alt="Candle Lifestyle Shot" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Lifestyle shot of 'Candle 04' placed on a minimal wooden side table alongside a delicate ceramic vase and a dried floral arrangement. The scene is bathed in golden hour light casting soft, elongated shadows. The aesthetic is calm, spacious, and embodies a 'photography-first' minimalist luxury vibe. Dusty rose and ivory lace color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCciE-4UK57XQ9plbV_nlLc6aZIXB2bpeBWIUn_Sxn6R_uoD8jHCvwlsj4mxR5kjEtD-CcI1UQNO2sayRpI21a6PmGDmDZ3oLM1RpnFQrCCnfKHhcavUnNR7IVJbWE8GXnWE1tt4BpyyZWpAPmU_VzF5uXQaV-kBbXcUmI-M9DI0H0B6mzbZKLsvwQLN5rP2dZevS9atGe0MZ28Qo0EyzuEw8WFTaAHRWgWSgx6C4shRuEX9BGE46CM4g"/>
+</div>
+</div>
+</div>
+<!-- Product Details (Right Column) -->
+<div class="md:col-span-5 md:pl-8 lg:pl-16 flex flex-col justify-center sticky top-24 h-fit">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-tertiary/15 text-on-secondary-fixed rounded-full font-label-sm text-label-sm">Spicy</span>
+<span class="px-3 py-1 bg-tertiary/15 text-on-secondary-fixed rounded-full font-label-sm text-label-sm">Earthy</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg mb-2 text-on-background">Candle 04</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                    A complex and grounded fragrance capturing the essence of a late autumn evening. Notes of spiced amber, crushed dried leaves, and deep cedarwood blend to create a warm, inviting atmosphere. Hand-poured with our signature sustainable wax blend.
+                </p>
+<div class="text-headline-sm font-headline-sm mb-8">$48.00</div>
+<!-- Scent Notes Grid Component -->
+<div class="mb-10 p-6 bg-surface-container-low rounded-xl ambient-shadow">
+<h3 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-widest">Scent Pyramid</h3>
+<div class="grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center mb-2 text-on-secondary-container">
+<span class="material-symbols-outlined text-sm">air</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top</span>
+<span class="font-body-sm text-[13px] text-on-surface">Cardamom</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center mb-2 text-on-primary-container">
+<span class="material-symbols-outlined text-sm">spa</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Heart</span>
+<span class="font-body-sm text-[13px] text-on-surface">Amber</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center mb-2 text-on-tertiary-container">
+<span class="material-symbols-outlined text-sm">forest</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Base</span>
+<span class="font-body-sm text-[13px] text-on-surface">Cedarwood</span>
+</div>
+</div>
+</div>
+<!-- Order Action -->
+<div class="flex flex-col gap-4">
+<a class="w-full py-4 bg-on-secondary-fixed text-on-primary rounded-md font-label-md text-label-md text-center hover:bg-on-secondary-fixed-variant hover:shadow-lg transition-all duration-300" href="https://forms.google.com" target="_blank">
+                        Pre-order via Form
+                    </a>
+<p class="font-label-sm text-label-sm text-center text-outline-variant">
+                        Secure your allocation for the next pour.
+                    </p>
+</div>
+<!-- Accordion Details (Simple visual representation) -->
+<div class="mt-12 border-t border-surface-variant pt-6">
+<button class="w-full flex justify-between items-center py-2 text-left group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors">Details &amp; Care</span>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</button>
+<button class="w-full flex justify-between items-center py-2 mt-2 text-left group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors">Shipping Information</span>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-grid-margin-mobile md:px-grid-margin-desktop py-section-gap-mobile md:py-16 max-w-[1280px] mx-auto text-center md:text-left transition-all duration-200 flat no shadows">
+<div class="mb-6 md:mb-0">
+<span class="font-headline-sm text-headline-sm text-primary">The Wax Wizard</span>
+<p class="font-body-md text-body-md text-primary mt-2">© 2024 The Wax Wizard. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-secondary underline transition-all font-body-md text-body-md" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all font-body-md text-body-md" href="#">Privacy</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all font-body-md text-body-md" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

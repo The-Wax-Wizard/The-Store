@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Candle 01 - The Wax Wizard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#6b675d",
+                      "secondary": "#775846",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#fed4bd",
+                      "inverse-surface": "#31302f",
+                      "on-background": "#1c1b1b",
+                      "on-primary-fixed-variant": "#4a463e",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#626a53",
+                      "tertiary-fixed": "#dee6c9",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#1e1b14",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#625e55",
+                      "secondary-fixed-dim": "#e7bea8",
+                      "secondary-fixed": "#ffdbc8",
+                      "inverse-primary": "#ccc6ba",
+                      "tertiary-container": "#e2eacd",
+                      "on-tertiary-fixed-variant": "#424934",
+                      "primary-fixed": "#e9e2d6",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#ccc6ba",
+                      "surface-container": "#f1edeb",
+                      "primary-container": "#ede6da",
+                      "tertiary": "#5a614b",
+                      "surface-container-high": "#ece7e5",
+                      "inverse-on-surface": "#f4f0ee",
+                      "on-surface": "#1c1b1b",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-container": "#795a48",
+                      "on-secondary-fixed": "#2c1608",
+                      "on-tertiary-fixed": "#171e0c",
+                      "primary": "#625e55",
+                      "surface-container-low": "#f7f3f1",
+                      "tertiary-fixed-dim": "#c2caae",
+                      "background": "#fdf8f6",
+                      "on-surface-variant": "#4a463f",
+                      "outline-variant": "#ccc6bc",
+                      "surface-variant": "#e6e2e0",
+                      "surface-container-highest": "#e6e2e0",
+                      "outline": "#7b776e",
+                      "on-secondary-fixed-variant": "#5d4030",
+                      "surface-dim": "#ddd9d7",
+                      "surface": "#fdf8f6",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#fdf8f6",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "grid-margin-mobile": "24px",
+                      "gutter": "24px",
+                      "section-gap-mobile": "64px",
+                      "grid-margin-desktop": "80px",
+                      "section-gap-desktop": "120px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "label-sm": ["DM Sans"],
+                      "body-lg": ["DM Sans"],
+                      "body-md": ["DM Sans"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"],
+                      "label-md": ["DM Sans"],
+                      "headline-lg": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "display-lg-mobile": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Custom Material Symbol Class */
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Arch clip path for images */
+        .clip-arch {
+            clip-path: ellipse(120% 100% at 50% 100%);
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-background flex justify-between items-center w-full px-grid-margin-mobile md:px-grid-margin-desktop py-base max-w-[1280px] mx-auto flat no shadows">
+<a class="font-headline-sm text-headline-sm text-primary" href="#">The Wax Wizard</a>
+<nav class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<!-- Active State -->
+<a class="text-primary font-bold border-b border-primary pb-1 font-label-md text-label-md hover:text-secondary transition-colors duration-300 opacity-80 transition-all" href="#">Candles</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</nav>
+<div class="flex items-center space-x-4 text-primary">
+<button aria-label="camera" class="hover:text-secondary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+</button>
+<button aria-label="Menu" class="md:hidden hover:text-secondary transition-colors duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Product Section -->
+<section class="max-w-[1280px] mx-auto px-grid-margin-mobile md:px-grid-margin-desktop py-section-gap-mobile md:py-section-gap-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Gallery -->
+<div class="md:col-span-6 lg:col-span-7 flex flex-col space-y-4">
+<!-- Main Image with Arch Motif -->
+<div class="w-full aspect-[3/4] relative overflow-hidden bg-surface-container-low rounded-t-[100px] md:rounded-t-[200px]">
+<img alt="Candle 01 Main Image" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A high-end editorial product photograph of a luxury handmade candle in a sleek glass jar, resting on a textured linen surface. The scene is styled with minimalism, featuring warm, diffused natural light that highlights the smooth, creamy wax. Subtle props like a solitary dried floral sprig sit nearby. The color palette revolves around ivory, muted terracotta, and soft sage green, evoking a calm, boutique atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDipKCAopGvqYVBEKHGyLA3vAMV4fboSNBp3Vf39OVy06rnw8h46cV9n8uAs8zdeGzxM6W1fpaqZGFxpcIuqZ_txbLwatMSGhLq_DfaiY7jD2UIx98nc1t2do3aWkrwDCK5NaGSyL6Q6PgQkqXPKXHF6fiTx_x-Hek_oCpj_50In5eSZQp-m54yKYRlrdUjPNWXiS0CBmaATSiERHMB35-sEqx-lcdvtOaa19Z5PJs-30hLHcpp8cgqMw"/>
+</div>
+<!-- Thumbnails -->
+<div class="grid grid-cols-3 gap-4">
+<div class="aspect-square bg-surface-container-low overflow-hidden rounded-md cursor-pointer">
+<img alt="Candle detail 1" class="w-full h-full object-cover hover:opacity-80 transition-opacity" data-alt="Close-up macro shot of a candle wick and the perfectly smooth wax surface, emphasizing artisanal craftsmanship and luxury quality. Soft, warm lighting gently illuminates the texture of the wax, set against a pristine, minimalist ivory background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy6fE5U_edvIHwG5YeRU1OhBX5jj_T35yAy5U8ilwya-ShlcpuiKBY3Fdgj70taoMcu6-GZdvSyxgQrgPuUI5SrN0cVd1CQycmi6iYudSN939PnjkY6hXvKQ8VMXd5CBIeCUOrg6ZhPp2Sc7ftTM6_LM96jeAMU98yu6slcpuGZ98bxA9mNyC6fLZv2ew16I9LF6OgPX_sd9J0jjXN7pOIfNfsHi8lfyikFbzL_wkfpFGQYYORIPrcUg"/>
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden rounded-md cursor-pointer">
+<img alt="Candle lifestyle 2" class="w-full h-full object-cover hover:opacity-80 transition-opacity" data-alt="Lifestyle shot of a luxury candle burning softly on a minimal wooden side table, casting a gentle warm glow in a sophisticated, airy living space. The ambient light highlights the elegant arch details of the surrounding room architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhE-mJDTkdfp_jQ20QjgLkm1R5Tn34VHCBdd_8MIgVvxSamBPIut2hvIW_lpVd0oRBvs7fCgJ_5s2FxvJDmQMSXI25gX4OjoauOJMFyxbUNIJ4pZJN6lnAvkQbUoLQxapfU2Rb2VrH_hrRfNyYOhdo6cGMeE1KJOlMmrzrYJ4uFEV4ChxNPcMLmvR9epEvbk2viCoQgyJgcTueVbEJRDIlKGP3j3kekDOu-GUjKbqCVJbwIHX7HEMGAQ"/>
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden rounded-md cursor-pointer flex items-center justify-center bg-surface-variant">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">play_arrow</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Details -->
+<div class="md:col-span-6 lg:col-span-5 flex flex-col pt-8 md:pt-16 md:pl-8">
+<div class="mb-4">
+<span class="font-label-sm text-label-sm text-outline tracking-widest uppercase">Signature Collection</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Candle 01</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        An ethereal blend designed to ground the senses and elevate the spirit. Hand-poured in small batches using our proprietary artisanal wax blend, this vessel captures the essence of a tranquil morning ritual.
+                    </p>
+<!-- Scent Notes Grid -->
+<div class="mb-10">
+<h3 class="font-label-md text-label-md text-on-surface mb-4 uppercase tracking-wider">Scent Profile</h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-tertiary-container bg-opacity-30 text-on-surface px-4 py-1.5 rounded-full font-label-sm text-label-sm border border-tertiary-fixed-dim">Smoked Vetiver</span>
+<span class="bg-tertiary-container bg-opacity-30 text-on-surface px-4 py-1.5 rounded-full font-label-sm text-label-sm border border-tertiary-fixed-dim">Wild Fig</span>
+<span class="bg-tertiary-container bg-opacity-30 text-on-surface px-4 py-1.5 rounded-full font-label-sm text-label-sm border border-tertiary-fixed-dim">Warm Amber</span>
+</div>
+</div>
+<!-- Structured Details (Bento-ish List) -->
+<div class="border-t border-outline-variant divide-y divide-outline-variant mb-12">
+<div class="py-4 flex justify-between items-center group">
+<span class="font-label-md text-label-md text-on-surface">Wax Type</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Coconut &amp; Soy Blend</span>
+</div>
+<div class="py-4 flex justify-between items-center group">
+<span class="font-label-md text-label-md text-on-surface">Burn Time</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Approx. 60 Hours</span>
+</div>
+<div class="py-4 flex justify-between items-center group">
+<span class="font-label-md text-label-md text-on-surface">Size &amp; Weight</span>
+<span class="font-body-md text-body-md text-on-surface-variant">10 oz (283g)</span>
+</div>
+<div class="py-4 flex flex-col space-y-2">
+<span class="font-label-md text-label-md text-on-surface">Ingredients</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Vegan wax blend, phthalate-free premium fragrance oils, unbleached cotton wick.</span>
+</div>
+<div class="py-4 flex flex-col space-y-2">
+<span class="font-label-md text-label-md text-on-surface">Care Instructions</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Trim wick to 1/4" before each use. Allow wax to melt to the edges during the first burn to prevent tunneling.</span>
+</div>
+</div>
+<!-- CTA -->
+<a class="inline-flex items-center justify-center w-full bg-secondary-fixed-dim text-on-secondary-fixed font-label-md text-label-md py-5 px-8 rounded-md hover:bg-secondary-container transition-colors duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.04)]" href="GOOGLE_FORM_URL_HERE">
+                        ORDER THIS CANDLE
+                    </a>
+</div>
+</div>
+</section>
+<!-- Visual Break / Atmosphere -->
+<section class="w-full h-48 md:h-64 relative overflow-hidden my-12">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed opacity-40" data-alt="A panoramic, deeply atmospheric macro photograph of melting candle wax blending with delicate wisps of smoke against a soft, creamy ivory background. The image serves as an abstract texture, highlighting organic curves and the luxurious, sensual nature of premium materials in soft focus." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOkz3k1HWErDRYWTxHZmRRliAjmfYxVJTid7NKciCChoLxeEB7xINiwBe_4ZnSf5ahe5g8FfPiGOhVypNkmfM3_V4T-CbWocjxAUs6cYSHMv0o9yow6MB2Vc8DnOArlGfoaRDQJ6c2CyEenQKH4r2_bXjLP3IZb_41iUBY2UUAAWj1a6fhCHNsHimtf9dlW9vd3N44nE1MbvBo2egw3GO6_UWvbIzm2abtj0UcRGVlMmDaExe7xCDW5A')"></div>
+</section>
+<!-- Contact / Stay Connected Section -->
+<section class="bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop px-grid-margin-mobile text-center">
+<div class="max-w-2xl mx-auto flex flex-col items-center">
+<span class="material-symbols-outlined text-tertiary mb-6" style="font-size: 40px; font-variation-settings: 'FILL' 0;">all_inclusive</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Let's Stay Connected</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                    Join our inner circle for early access to seasonal pours, behind-the-scenes studio notes, and exclusive botanical insights.
+                </p>
+<form class="w-full flex flex-col sm:flex-row gap-4 justify-center" onsubmit="event.preventDefault();">
+<div class="relative w-full max-w-sm">
+<label class="sr-only" for="email-input">Email address</label>
+<input class="w-full bg-background border-b border-outline hover:border-primary focus:border-primary focus:ring-0 focus:outline-none py-3 px-2 font-body-md text-body-md text-on-surface placeholder:text-outline-variant transition-colors bg-transparent border-t-0 border-l-0 border-r-0" id="email-input" placeholder="Your email address" type="email"/>
+</div>
+<button class="font-label-md text-label-md text-secondary border-b border-secondary pb-1 hover:text-on-surface transition-colors whitespace-nowrap self-center mt-4 sm:mt-0" type="submit">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low flex flex-col md:flex-row justify-between items-center w-full px-grid-margin-mobile md:px-grid-margin-desktop py-section-gap-mobile md:py-16 max-w-[1280px] mx-auto text-center md:text-left flat no shadows Transition-all duration-200">
+<div class="mb-8 md:mb-0">
+<a class="font-headline-sm text-headline-sm text-primary" href="#">The Wax Wizard</a>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<nav class="flex gap-6">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary underline transition-all" href="#">Instagram</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary underline transition-all" href="#">Privacy</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary underline transition-all" href="#">Terms</a>
+</nav>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 The Wax Wizard. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
